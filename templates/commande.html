@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen">
+    <link rel="shortcut icon" href="/img/logo-mini.png" type="image/x-icon">
+    <title>Lunch Écolier</title>
+</head>
+<body>
+
+    <nav class="menu-bar">
+        <img src="/img/logo-mini.png" alt="logo">
+        <ul class="menu-options">
+            <li><a href="/">accueil</a></li>
+            <li><a href="/informations">informations</a></li>
+            <li><a href="/contact">contact</a></li>
+            <li><a href="/commande" class="active">commande</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="container">
+            <h2>commande</h2>
+            <hr>
+            <p>
+                <img src="/img/salad-icon.png" alt="salad-lunch" class="icon">    
+                Remplissez le formulaire ci-dessus pour commander les repas de la 
+                semaine pour votre enfant.
+            </p>
+        
+            <form action="/submit" method="post">
+                <label for="parent">Nom complet du parent : </label>
+                <input id="parent" name="Parent" type="text" placeholder="Nom du parent ..." 
+                       pattern="[^,]*" title="Le nom ne doit pas contenir une virgule" required>
+                <div id="message-nom-parent">
+                    <p>Ne doit pas contenir une virgule (,)</p>
+                </div>
+                <br>
+                <label for="enfant">Nom complet de l'enfant : </label>
+                <input id="enfant" name="Enfant" type="text" placeholder="Nom de l'enfant ..." 
+                        pattern="[^,]*" title="Le nom ne doit pas contenir une virgule" required>
+                <div id="message-nom-enfant">
+                    <p>Ne doit pas contenir une virgule (,)</p>
+                </div>
+                <br>
+                <label for="age">Âge de l'enfant : </label>
+                <input id="age" name="Age" type="number" placeholder="Âge" 
+                        min="4" max="12" title="L'âge doit être entre 4 et 12 ans" required>
+                <div id="message-age">
+                    <p>L'âge entré doit être entre 4 et 12 (inclusivement)</p>
+                </div>
+                <br>
+                <label for="ecole">L'école de l'enfant : </label>
+                <input id="ecole" name="Ecole" type="text" placeholder="Nom de l'école ..." 
+                        pattern="[^,]*" title="Le nom ne doit pas contenir une virgule" required>
+                <div id="message-nom-ecole">
+                    <p>Ne doit pas contenir une virgule (,)</p>
+                </div>
+                <br>
+                <br>
+
+                <fieldset>
+                    <legend>Lundi : </legend>
+                        <label for="lundi1" class="label-container">
+                            <input id="lundi1" name="Lundi" type="radio" value="Lasagne à la viande" required>
+                            <span class="checkmark"></span>
+                            <img src="/img/pexels-alleksana-lasagne-5949897.jpg" alt="Lasagne à la viande">
+                            Lasagne à la viande
+                        </label>
+                        <br>
+                        <label for="lundi2" class="label-container">
+                            <input id="lundi2" name="Lundi" type="radio" value="Tacos au boeuf">
+                            <span class="checkmark"></span>
+                            <img src="/img/pexels-john-guccione-tacos-beouf-7904958.jpg" alt="Tacos au boeuf">
+                            Tacos au boeuf
+                        </label>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Mardi : </legend>
+                        <label for="mardi1" class="label-container">
+                            <input id="mardi1" name="Mardi" type="radio" value="Wrap aux poulets" required>
+                            <span class="checkmark"></span>
+                            <img src="/img/pexels-kamila-bairam-wrap-poulet-12123661.jpg" alt="Wrap aux poulets">
+                            Wrap aux poulets
+                        </label>
+                        <br>
+                        <label for="mardi2" class="label-container">
+                            <input id="mardi2" name="Mardi" type="radio" value="Spaghetti bolognaise">
+                            <span class="checkmark"></span>
+                            <img src="/img/pexels-klaus-nielsen-spaghetti-bolognaise-6287520.jpg" alt="Spaghetti bolognaise">
+                            Spaghetti bolognaise
+                        </label>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Mercredi : </legend>
+                        <label for="mercredi1" class="label-container">
+                            <input id="mercredi1" name="Mercredi" type="radio" value="Salade de pâtes au jambon et pois" required>
+                            <span class="checkmark"></span>
+                            <img src="/img/pixabay-pasta-salad-jambon-g4f5015d19_640.jpg" alt="Salade de pâtes au jambon et pois">
+                            Salade de pâtes au jambon et pois
+                        </label>
+                        <br>
+                        <label for="mercredi2" class="label-container">
+                            <input id="mercredi2" name="Mercredi" type="radio" value="Salade de pâtes au brocoli et au cheddar">
+                            <span class="checkmark"></span>
+                            <img src="/img/pixabay-pasta-salad-vegies-g64644d12f_640.jpg" alt="Salade de pâtes au brocoli et au cheddar">
+                            Salade de pâtes au brocoli et au cheddar
+                        </label>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Jeudi : </legend>
+                        <label for="jeudi1" class="label-container">
+                            <input id="jeudi1" name="Jeudi" type="radio" value="Potage au chou-fleur et pois chiches" required>
+                            <span class="checkmark"></span>
+                            <img src="/img/potage-au-chou-fleur-et-pois-chiches-grilles-600x600.jpg" alt="Potage au chou-fleur et pois chiches">
+                            Potage au chou-fleur et pois chiches grillés
+                        </label>
+                        <br>
+                        <label for="jeudi2" class="label-container">
+                            <input id="jeudi2" name="Jeudi" type="radio" value="Potage au brocoli, carottes et cheddar">
+                            <span class="checkmark"></span>
+                            <img src="/img/potage-au-brocoli-carottes-et-cheddar-702x480.jpg" alt="Potage au brocoli, carottes et cheddar">
+                            Potage au brocoli, carottes et cheddar
+                        </label>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Vendredi : </legend>
+                        <label for="vendredi1" class="label-container">
+                            <input id="vendredi1" name="Vendredi" type="radio" value="Boulettes de poulet (général tao)" required>
+                            <span class="checkmark"></span>
+                            <img src="/img/boulettes-au-poulet-sauce-general-tao-600x600.jpeg" alt="Boulettes de poulet (général tao)">
+                            Boulettes de poulet (sauce général tao) servis avec du riz
+                        </label>
+                        <br>
+                        <label for="vendredi2" class="label-container">
+                            <input id="vendredi2" name="Vendredi" type="radio" value="One pot farfalles au poulet">
+                            <span class="checkmark"></span>
+                            <img src="/img/one-pot-farfalles-au-poulet-600x600.jpeg" alt="One pot farfalles au poulet">
+                            One pot farfalles au poulet
+                        </label>
+                </fieldset>
+                <br>
+                <br>
+                <input type="reset" value="Recommencez">
+                <input type="submit" value="Confirmez">
+            </form>
+        </section>
+        <script src="/js/fonctions.js"></script>
+        <footer>
+            <small>
+                <a href="https://www.flaticon.com/free-icons/lunch" title="lunch icons">© Lunch icons created by Linector - Flaticon</a>
+            </small>
+        </footer>
+    </main>
+    
+</body>
+</html>
